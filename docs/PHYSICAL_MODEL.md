@@ -17,8 +17,8 @@ NAME | Название | `VARCHAR(100)` | NOT NULL| |
 ### PROGRAM_EXERCISES -  Упражнения в программе
 Название | Описание | Тип данных | Ограничение | PK | FK
 --- | --- | --- | --- | --- | ---
-PROGRAM_ID | Идентификатор программы | `INT` | NOT NULL |+| PROGRAMS(ID)
-EXERCISE_ID | Идентификатор упражнения | `INT` | NOT NULL|+| EXERCISES(ID)
+PROGRAM_ID | Идентификатор программы | `INT` |  |+| PROGRAMS(ID)
+EXERCISE_ID | Идентификатор упражнения | `INT` | |+| EXERCISES(ID)
 
 ### EXERCISES -  Упражнения
 Название | Описание | Тип данных | Ограничение | PK | FK
@@ -30,8 +30,8 @@ MUSCLES | Группа мышщ | `VARCHAR(200)` | NOT NULL| |
 ### EXERCISE_ITEMS -  Инвентарь для упражнения
 Название | Описание | Тип данных | Ограничение | PK | FK
 --- | --- | --- | --- | --- | ---
-EXERCISE_ID | Идентификатор упражнения | `INT` | NOT NULL|+| EXERCISES(ID)
-ITEM_ID | Идентификатор предмета | `INT` | NOT NULL |+| ITEMS(ID)
+EXERCISE_ID | Идентификатор упражнения | `INT` | |+| EXERCISES(ID)
+ITEM_ID | Идентификатор предмета | `INT` |  |+| ITEMS(ID)
 
 ### ITEMS -  Предмет инвентаря
 Название | Описание | Тип данных | Ограничение | PK | FK
@@ -42,8 +42,8 @@ NAME | Название | `VARCHAR(100)` | NOT NULL| |
 ### GYM_ITEMS -  Инвентарь зала - SCD(2)
 Название | Описание | Тип данных | Ограничение | PK | FK
 --- | --- | --- | --- | --- | ---
-GYM_ID| Идентификатор зала | `INT` | NOT NULL|+| GYMS(ID)
-ITEM_ID | Идентификатор предмета | `INT` | NOT NULL |+| ITEMS(ID)
+GYM_ID| Идентификатор зала | `INT` | |+| GYMS(ID)
+ITEM_ID | Идентификатор предмета | `INT` |  |+| ITEMS(ID)
 TIME_FROM | Время добавления SCD(2)| `TIMESTAMP` | NOT NULL |+|
 TIME_TO | Время удаления SCD(2)| `TIMESTAMP` | NOT NULL ||
 
@@ -63,11 +63,11 @@ NAME | Имя | `VARCHAR(100)` | NOT NULL| |
 ### ATHLETES_GYMS - Залы атлета
 Название | Описание | Тип данных | Ограничение | PK | FK
 --- | --- | --- | --- | --- | ---
-ATHLETE_ID | Идентификатор атлета | `INT` | NOT NULL |+| ATHLETES(ID)
-GYM_ID | Идентификатор зала | `INT` | NOT NULL|+| GYMS(ID)
+ATHLETE_ID | Идентификатор атлета | `INT` | |+| ATHLETES(ID)
+GYM_ID | Идентификатор зала | `INT` | |+| GYMS(ID)
 
 ### TRAINERS_GYMS - Залы тренера
 Название | Описание | Тип данных | Ограничение | PK | FK
 --- | --- | --- | --- | --- | ---
-TRAINER_ID | Идентификатор тренера | `INT` | NOT NULL |+| TRAINERS(ID)
-GYM_ID | Идентификатор зала | `INT` | NOT NULL|+| GYMS(ID)
+TRAINER_ID | Идентификатор тренера | `INT` |  |+| TRAINERS(ID)
+GYM_ID | Идентификатор зала | `INT` | |+| GYMS(ID)
