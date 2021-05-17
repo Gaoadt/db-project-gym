@@ -131,9 +131,7 @@ AND (items.name = 'Беговая дорожка');
    at least at the very beginning, cause it is scd 2 table.
 */
 
-INSERT INTO FITNESS.gym_items(item_id, gym_id, time_from, time_to) SELECT ITEMS.ID, GYMS.ID,
-                                                                          TO_TIMESTAMP('2000-01-01', 'YYYY-MM-DD'),
-                                                                          TO_TIMESTAMP('5999-01-01', 'YYYY-MM-DD')
+INSERT INTO FITNESS.gym_items(item_id, gym_id) SELECT ITEMS.ID, GYMS.ID
 FROM fitness.gyms cross join fitness.items;
 
 -- STEP 9
