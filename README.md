@@ -22,6 +22,9 @@ postgres | 2828 | 5432
 [Смысловые запросы](sql/five_queries.sql)
 ### Пункт 6
 [CRUD запросы](sql/crud.sql)
+### Пункт 7-8
+[Представления](sql/views.sql)
+
 
 ### Очистка бд
 [cleanup](sql/cleanup.sql)
