@@ -30,7 +30,8 @@ create view fitness.v_gym as select gym_title, club_nm from fitness.gym;
 
 -- STEP 6: gym and items
 create view fitness.v_gym_x_item as select gym_title, item_title from fitness.gym_x_item inner join
-    fitness.gym g on g.id = gym_x_item.gym_id inner join fitness.item i on i.id = gym_x_item.item_id;
+    fitness.gym g on g.id = gym_x_item.gym_id inner join fitness.item i on i.id = gym_x_item.item_id where
+    valid_to_dttm > now();
 
 -- STEP 7: items
 create view fitness.v_item as select item_title from fitness.item;
